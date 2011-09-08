@@ -591,3 +591,4 @@ function twentyeleven_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
 
+remove_filter( 'the_content', 'wpautop' );

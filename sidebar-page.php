@@ -7,7 +7,6 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-
 get_header(); ?>
 
 		<div id="primary">
@@ -17,7 +16,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php comments_template( '', true ); ?>
+				<?php //comments_template( '', true ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
