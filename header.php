@@ -72,7 +72,7 @@
 	<header id="branding" role="banner">
 			<ul class="top-links">
 			    <li>
-			        <a href="">Contact Us</a>
+			        <a href="<?php echo get_permalink(26); ?>">Contact Us</a>
 			    </li>
 			</ul>
 			<a href="<?php echo get_permalink(5); ?>" class="logo">
@@ -90,3 +90,35 @@
 
 
 	<div id="main" class="cf">
+		<?php
+        if (is_page() and ($notfound != '1') and ! is_front_page() ) {
+          $breadcrumbs = array(); 
+					$postb = $post->ID;
+					$current_page = $post->ID;
+
+					while($current_page) {
+						$page_query = $wpdb->get_row("SELECT ID, post_title, post_status, post_parent FROM $wpdb->posts WHERE ID = '$current_page'");
+            array_unshift($breadcrumbs, $page_query);
+						$current_page = $page_query->post_parent;
+					}
+					$parent_id = $page_query->ID;
+
+          ?>
+            <ul class="breadcrumbs">
+                <li><a href="<?php echo get_permalink(5); ?>">Home</a></li>
+                <?php foreach($breadcrumbs as $entry ) { ?>
+                <li><a href="<?php echo get_permalink($entry->ID); ?>"><?php echo $entry->post_title; ?></a></li>
+                <?php } ?>
+            </ul>
+          <?php  
+        
+        if ($postb !== (int)$page_query->ID) {
+					?><h1 class="rotate-header"><?php echo $page_query->post_title; ?></h1><?php
+				}
+       } elseif ( $post->post_type == "wpsc-product" ){
+				  ?><h1 class="rotate-header">W.O.B. Store</h1><?php
+       } elseif ( ! is_page() ){
+				  ?><h1 class="rotate-header">Blog</h1><?php
+          //echo "ASDASDASD";*/
+			}
+		?>

@@ -9,15 +9,15 @@
 
 get_header(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
+		<section id="primary" class="with-sidebar">
+			<div id="content" class="with-sidebar" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'twentyeleven' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-					?></h1>
+        <h1 class="page-title"><?php
+            printf( __( 'Category Archives: %s', 'twentyeleven' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+          ?></h1>
 
 					<?php
 						$category_description = category_description();
@@ -61,5 +61,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('blog'); ?>
 <?php get_footer(); ?>

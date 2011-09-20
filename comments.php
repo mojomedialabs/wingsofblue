@@ -69,7 +69,6 @@
 		 */
 		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'twentyeleven' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

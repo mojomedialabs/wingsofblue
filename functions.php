@@ -380,9 +380,9 @@ function twentyeleven_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Showcase Sidebar', 'twentyeleven' ),
+		'name' => __( 'Blog Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
+		'description' => __( 'The sidebar for the Blog', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -559,6 +559,17 @@ if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
  * @since Twenty Eleven 1.0
  */
 function twentyeleven_posted_on() {
+	?>
+		<span class="posted-by"><span class="sep">by </span><?php the_author(); ?></span>
+		<span class="posted-on"><span class="sep">Posted on </span>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_time(); ?>">
+			    <time class="entry-date" pubdate datetime="<?php echo get_the_date('c'); ?>">
+					<?php echo get_the_date(); ?>
+				</time>
+			</a>
+		</span>
+	<?php
+	return '';
 	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'twentyeleven' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
@@ -580,9 +591,9 @@ endif;
  */
 function twentyeleven_body_classes( $classes ) {
 
-	if ( ! is_multi_author() ) {
-		$classes[] = 'single-author';
-	}
+//	if ( ! is_multi_author() ) {
+//		$classes[] = 'single-author';
+//	}
 
 	if ( is_singular() && ! is_home() && ! is_page_template( 'showcase.php' ) && ! is_page_template( 'sidebar-page.php' ) )
 		$classes[] = 'singular';
@@ -592,3 +603,52 @@ function twentyeleven_body_classes( $classes ) {
 add_filter( 'body_class', 'twentyeleven_body_classes' );
 
 remove_filter( 'the_content', 'wpautop' );
+
+/**
+ *
+ * Adds a wob_facebook_like() method
+ *
+ * params:
+ *  Array =>
+ *   "url" => String()
+ *	 "send" => Bool(false)
+ *	 "width" => Integer(450)
+ *	 "show-faces" => Bool(false)
+ *	 "layout" => Enum["standard","button_count","box_count"]("standard")
+ *	 "verb" => Enum["like","recommend"]("like")
+ *	 "color-scheme" => Enum["light", "dark"]("light")
+ *	 "font" => Enum["arial","lucida grande","segoe ui","tahoma","trebuchet ms","verdana"]("arial")
+ *
+ */
+
+function wingsofblue_facebook_like($options = array()){
+	$defaults = array(
+		"url" => "",
+		"send" => false,
+		"width" => 0,
+		"show-faces" => false,
+		"layout" => "button_count",
+		"verb" => "like",
+		"color-scheme" => "light",
+		"font" => "arial"
+	);
+	if ( (array)$options == $options ){
+		$new_opts = array_merge($defaults, $options);
+	} else {
+		$new_opts = array_merge($defaults, array("url" => $options));
+	}
+
+	if (! $new_opts["url"]){
+		return "";
+	}
+	?>
+	<div id="fb-root"></div>
+	<script>(function(d){
+	  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+	  js = d.createElement('script'); js.id = id; js.async = true;
+	  js.src = "//connect.facebook.net/en_US/all.js#appId=246216458756912&xfbml=1";
+	  d.getElementsByTagName('head')[0].appendChild(js);
+	}(document));</script>
+	<div class="fb-like" <?php foreach($new_opts as $key => $value){ echo 'data-'.$key.'="'.$value.'"'; } ?>></div>
+	<?php
+}

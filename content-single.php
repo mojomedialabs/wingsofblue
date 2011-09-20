@@ -9,7 +9,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header cf">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -25,11 +25,16 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
+		<ul class="social">
+			<li><?php wingsofblue_facebook_like( get_permalink() ); ?></li>
+			<li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+		</ul>
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
 
 			/* translators: used between list items, there is a space after the comma */
+			/** /
 			$tag_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
 			if ( '' != $tag_list ) {
 				$utility_text = __( 'This entry was posted in %1$s and tagged %2$s by <a href="%6$s">%5$s</a>. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyeleven' );
@@ -48,8 +53,7 @@
 				get_the_author(),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
 			);
-		?>
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+		/**/ ?>
 
 		<?php if ( get_the_author_meta( 'description' ) && is_multi_author() ) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries ?>
 		<div id="author-info">

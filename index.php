@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
+		<div id="primary" class="with-sidebar" >
+			<div id="content" class="with-sidebar" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -48,5 +48,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar("blog"); ?>
 <?php get_footer(); ?>

@@ -10,8 +10,7 @@
 get_header(); ?>
 
 		<div id="primary">
-			<div id="content" role="main">
-
+			<div id="content" class="with-sidebar" role="main" class="blog-post">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<nav id="nav-single">
@@ -29,4 +28,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
+<?php get_sidebar("blog"); ?>
 <?php get_footer(); ?>

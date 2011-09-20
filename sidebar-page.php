@@ -9,8 +9,8 @@
  */
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
+		<div id="primary" class="with-sidebar" >
+			<div id="content" class="with-sidebar" role="main">
 
 				<?php the_post(); ?>
 

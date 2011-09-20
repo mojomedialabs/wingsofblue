@@ -24,13 +24,13 @@
         <a href="http://youtube.com/channels/USERNAMEHERE" id="youtube">
             <img src="<?php bloginfo('template_directory'); ?>/images/footer/youtube.png" alt="Youtube" />
         </a>
-        <a href="http://twitter.com/#!/USERNAMEHERE" id="twitter">
+        <a href="http://twitter.com/#!/WingsofBlue1" id="twitter">
             <img src="<?php bloginfo('template_directory'); ?>/images/footer/twitter.png" alt="Twitter" />
         </a>
         <a href="http://facebook.com/URLTOPAGEHERE" id="facebook">
             <img src="<?php bloginfo('template_directory'); ?>/images/footer/facebook.png" alt="Facebook" />
         </a>
-        <a href="http://flickr.com/URLTOPAGEHERE" id="flickr" class="colophon-left-pad">
+        <a href="http://flickr.com/wingsofblue" id="flickr" class="colophon-left-pad">
             <img src="<?php bloginfo('template_directory'); ?>/images/footer/flickr.png" alt="Flickr Photo Album" />
         </a>
         <form action="/subscription/create" method="POST" id="subscription" class="colophon-left-pad">
@@ -38,14 +38,8 @@
 			<br />
             <input type="text" name="subscribe[email]" value="" placeholder="Email..." />
         </form>
-		<a href="http://www.airforce.com/" class="colophon-left-pad">
-		    <img src="<?php bloginfo('template_directory'); ?>/images/footer/usaf.png" alt="USA Air Force" />
-		</a>
 		<a href="http://UNKNOWNRUL/" class="colophon-left-pad">
 		    <img src="<?php bloginfo('template_directory'); ?>/images/footer/usafatheletic.png" alt="USAF Athletic Dept." />
-		</a>
-		<a href="http://UNKNOWNURL/" class="colophon-left-pad">
-		    <img src="<?php bloginfo('template_directory'); ?>/images/footer/usafa.png" alt="" />
 		</a>
       </div>
       <ul id="colophon-sub">
@@ -62,13 +56,13 @@
 		    <a href="<?php echo get_permalink(34); ?>">Partners</a>
 		</li>
 		<li>
-		    <a href="<?php echo get_permalink(36); ?>">W.O.B. Store</a>
+		    <a href="<?php echo get_permalink(207); ?>">W.O.B. Store</a>
 		</li>
 		<li>
-		    <a href="<?php echo get_permalink(53); ?>">W.O.B. Blog</a>
+		    <a href="<?php echo get_permalink(53); ?>">Blog</a>
 		</li>
 		<li>
-		    <a href="<?php echo get_permalink(90); ?>">Contact</a>
+		    <a href="<?php echo get_permalink(26); ?>">Contact</a>
 		</li>
 		<li>
 		    <a href="<?php echo get_permalink(92); ?>">Terms of Use</a>

@@ -1107,9 +1107,9 @@ article.format-status .entry-content {
 	padding: 4.875em 0 0;
 	position: relative;
 }
-.singular.page .hentry {
-	padding: 3.5em 0 0;
-}
+/*.singular.page .hentry {*/
+	/*padding: 3.5em 0 0;*/
+/*}*/
 .singular .entry-title {
 	color: #000;
 	font-size: 36px;
@@ -1119,11 +1119,6 @@ article.format-status .entry-content {
 .singular .entry-title,
 .singular .entry-header .entry-meta {
 	padding-right: 0;
-}
-.singular .entry-header .entry-meta {
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 blockquote.pull {
 	font-size: 21px;
@@ -2736,7 +2731,6 @@ header#branding ul.top-links li{
 	display: inline;
 }
 header#branding ul.top-links li:first-child {
-	border-right: 1px solid blue;
 	padding-right: 5px;
 	margin-right: 5px;
 }
@@ -2808,10 +2802,10 @@ nav#access ul.sub-menu li:hover > a{
 }
 
 /* Sidebar Area */
-#secondary aside {
+#secondary.page-sidebar aside {
 	width: 165px;
 }
-#secondary aside h3 {
+#secondary.page-sidebar aside h3 {
 	background: url(images/sidebar_header.png) no-repeat top center;
 	font-weight: bold;
 	font-size: 120%;
@@ -2821,7 +2815,7 @@ nav#access ul.sub-menu li:hover > a{
 	margin-bottom: 0px;
 	line-height: 25px;
 }
-#secondary aside ul {
+#secondary.page-sidebar aside ul {
 	list-style: none;
 	padding-left: 0px;
 	text-align: center;
@@ -2836,8 +2830,18 @@ nav#access ul.sub-menu li:hover > a{
 #recent-category-posts ul li a { color: #E8E8E8; }
 #recent-category-posts ul li a:visited { color: #989898; }
 
+#em_widget-3 ul {
+  background: url(events_bg_main.png) no-repeat bottom center;
+  padding-bottom: 12px;
+}
+#em_widget-3 ul li {
+  background: url(images/events_bg_main.png) repeat-y top center;  
+}
+#em_widget-3 ul li a { color: #E8E8E8; }
+#em_widget-3 ul li a:visited { color: #989898; }
+
 /* Footer Code */
-footer {
+footer#colophon {
 	position: fixed;
 	overflow: hidden;
 	left: 0px;
@@ -2846,7 +2850,7 @@ footer {
 	z-index: 700;
 	color: #ccc;
 	font-size: 9px;
-	
+
 	background-color: #000;
 }
 
@@ -2910,4 +2914,222 @@ footer {
 }
 header.entry-header {
 	color: #005daa !important;
+}
+.entry-content, .entry-summary {
+	padding-top: 0px;
+}
+h1.entry-title {
+	color: #005eab !important;
+	padding-top: 0px !important;
+	font-size: 29px !important;
+	line-height: 32px !important;
+}
+
+/* Serif Class */
+.serif {
+	font-family: "Times New Roman", "Nimbus Roman No9 L", serif;
+}
+
+/* Blog Styling */
+.post header .entry-title {
+	margin-bottom: 0px;
+}
+.post header .entry-title a {
+	color: #005eab;
+}
+.post header .entry-meta {
+    width: 100%;
+}
+.post header .entry-meta .posted-on {
+    float: right;
+}
+.post header .entry-meta .posted-by {
+    float: left;
+}
+.post footer .multipost-footer {
+    width: 100%;
+    text-align: center;
+    background: #CCC;
+    margin: 0px;
+    padding: 5px;
+}
+.post footer .multipost-footer li {
+    list-style: none;
+    display: inline;
+    padding: 0px 0px 0px 30px;
+}
+.post footer .multipost-footer li:first-child ,
+.post footer .multipost-footer li:first-child {
+    padding: 0px;
+}
+.post footer .multipost-footer li:first-child {
+    float: left;
+}
+.post footer .multipost-footer li:last-child {
+    float: right;
+}
+.blog-sidebar aside h3 {
+    margin-bottom: 0px;
+    color: #005eab;
+    background-color: #ccc;
+    padding-left: 5px;
+}
+.blog-sidebar aside ul {
+    margin: 0px;
+    padding: 0px;
+}
+.blog-sidebar aside ul li {
+    list-style: none;
+    padding: 3px 0px 3px 5px;
+    margin: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.entry-meta .social {
+    margin-left: 0px;
+    padding: 0px;
+}
+.entry-meta .social li {
+    list-style: none;
+    display: inline;
+    padding: 0px;
+}
+
+.singular #primary.with-sidebar {
+margin: 0 -26.4% 0 0 !important;
+width: 74%;
+padding-left: 60px;
+}
+
+#nav-single {
+display: none;
+}
+
+.singular .entry-header .entry-meta {
+position: relative;
+}
+
+.singular .hentry {
+padding: 0;
+}
+
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+width: 100%;
+
+}
+
+.singular #content.with-sidebar, .left-sidebar.singular #content {
+margin: 0 34% 0 11.6%;
+}
+
+.singular article .entry-title {
+padding-top: 0;
+}
+
+.singular .entry-meta .edit-link a {
+right: 0;
+top: 0;
+left: auto;
+}
+
+#respond {
+    background: none !important;
+    border: none !important;
+}
+#respond .comment-form-author label, #respond .comment-form-email label, #respond .comment-form-url label, #respond .comment-form-comment label {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #005EAB;
+    color: #EEE;
+}
+#respond .comment-form-author .required, #respond .comment-form-email .required {
+    font-size: 15px;
+}
+#respond input[type="text"], #respond textarea {
+    padding: 9px;
+    border-color: #005EAB;
+}
+#respond p {
+    margin: 0px;
+}
+.page #content, #content.with-sidebar{ margin-left: 115px !important; }
+#main{ position: relative; }
+.rotate-header {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    font-size: 29px;
+    color: #005DAA;
+    -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+       -moz-transform: rotate(-90deg);  /* FF3.5+ */
+        -ms-transform: rotate(-90deg);  /* IE9 */
+         -o-transform: rotate(-90deg);  /* Opera 10.5 */
+            transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+        M11=6.123031769111886e-17, M12=1, M21=-1, M22=6.123031769111886e-17, sizingMethod='auto expand');
+    zoom: 1;
+}
+.breadcrumbs {
+    padding-left: 0px;
+}
+.breadcrumbs li {
+    list-style: none;
+    margin-left: 0px;
+    display: inline;
+    padding-right: 4px;
+}
+.breadcrumbs li:after {
+    content: "➤";
+    color: #005DAA;
+    padding-left: 8px;
+}
+.breadcrumbs li:last-child:after {
+    content: ""
+}
+
+.em-calendar.fullcalendar tbody td {
+    width: 14%;
+    height: 75px;
+}
+.em-calendar.fullcalendar tbody tr.days-names td {
+    height: 14px;
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+.em-calendar.fullcalendar tbody td:first-child,
+.em-calendar.fullcalendar tbody td:last-child {
+    background-color: #cfdef2;
+}
+
+.em-calendar.fullcalendar tbody ul {
+    padding: 0px;
+    margin: 0px;
+}
+.em-calendar.fullcalendar tbody ul li {
+    display: block;
+    list-style: none;
+    margin: 0px;
+    font-size: 85%;
+}
+
+.em-calendar.fullcalendar thead td.month_name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}    
+.em-calendar.fullcalendar tbody td.today {
+    background-color: #ffcd35;
+}
+
+.em-calendar.fullcalendar tbody td.post,
+.em-calendar.fullcalendar tbody td.pre {
+    background-color: #CFCFCF;
+}
+.em-calendar.fullcalendar tbody tr {
+    border: 1px solid #373737;
+}
+
+#content {
+  min-height: 375px;
 }

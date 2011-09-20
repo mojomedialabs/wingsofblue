@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Showcase Template
+ * Template Name: DO NOT USE
  * Description: A Page Template that showcases Sticky Posts, Asides, and Blog Posts
  *
  * The showcase template in Twenty Eleven consists of a featured posts section using sticky posts,
