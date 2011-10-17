@@ -43,7 +43,10 @@ $.widget( "ui.tabs", {
 		select: null,
 		show: null,
 		spinner: "<em>Loading&#8230;</em>",
-		tabTemplate: "<li><a href='#{href}'><span>#{label}</span></a></li>"
+		tabTemplate: "<li><a href='#{href}'><span>#{label}</span></a></li>",
+    showNextPrev: false,
+    nextText: "Next",
+    prevText: "Prev"
 	},
 
 	_create: function() {
@@ -102,12 +105,47 @@ $.widget( "ui.tabs", {
 			o = this.options,
 			fragmentId = /^#.+/; // Safari 2 reports '#' for an empty hash
 
-		this.list = this.element.find( "ol,ul" ).last();
+		this.list = this.element.children( "ol,ul" );
 		this.lis = $( " > li:has(a[href])", this.list );
 		this.anchors = this.lis.map(function() {
 			return $( "a", this )[ 0 ];
 		});
 		this.panels = $( [] );
+
+    if ( o['showNextPrev'] ) {
+      this.list.append(function(){
+        var item, link
+        item = jQuery('<li class="'+o['idPrefix']+'next">');
+        link = jQuery('<a href="#'+o['idPrefix']+'next">' + o['nextText'] + '</a>');
+        link.bind('click', function(e){
+          e.preventDefault();
+          var t = o.selected;
+          self.select( ++t < self.anchors.length ? t : 0 );
+          if ( self._rotate ){
+            self.rotate(null);
+          }
+        });
+        item.append(link);
+
+        return item;
+      }());
+      this.list.prepend(function(){
+        var item, link
+        item = jQuery('<li class="'+o['idPrefix']+'prev">');
+        link = jQuery('<a href="#'+o['idPrefix']+'prev">' + o['prevText'] + '</a>');
+        link.bind('click', function(e){
+          e.preventDefault();
+          var t = o.selected;
+          self.select( --t > -1 ? t : (self.anchors.length-1) );
+          if ( self._rotate ){
+            self.rotate(null);
+          }
+        });
+        item.append(link);
+
+        return item;
+      }());
+    }
 
 		this.anchors.each(function( i, a ) {
 			var href = $( a ).attr( "href" );

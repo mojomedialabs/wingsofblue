@@ -78,7 +78,7 @@
 			        <a href="<?php echo get_permalink(26); ?>">Contact Us</a>
 			    </li>
 			</ul>
-			<a href="<?php echo get_permalink(5); ?>" class="logo">
+			<a href="<?php echo get_permalink(6); ?>" class="logo">
 			    <img src="<?php bloginfo('template_directory'); ?>/images/headers/logo.png" width="190px" height="100px" style="width: 190px !important;" alt="" />
 			</a>
 			<nav id="access" role="navigation">

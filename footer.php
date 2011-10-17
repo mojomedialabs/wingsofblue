@@ -44,33 +44,33 @@
       </div>
       <ul id="colophon-sub">
         <li>
-            <a href="<?php echo get_permalink(7); ?>">About</a>
+            <a href="<?php echo get_permalink(8); ?>">About</a>
         </li>
-		<li>
-		    <a href="<?php echo get_permalink(26); ?>">Join Us</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(32); ?>">Events</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(34); ?>">Partners</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(207); ?>">W.O.B. Store</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(53); ?>">Blog</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(26); ?>">Contact</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(92); ?>">Terms of Use</a>
-		</li>
-		<li>
-		    <a href="<?php echo get_permalink(94); ?>">Privacy Policy</a>
-		</li>
-		<li>&copy; 2011 Wings of Blue</li>
+	<li>
+	    <a href="<?php echo get_permalink(24); ?>">Join Us</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(92); ?>">Events</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(32); ?>">Partners</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(34); ?>">W.O.B. Store</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(36); ?>">Blog</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(26); ?>">Contact</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(92); ?>">Terms of Use</a>
+	</li>
+	<li>
+	    <a href="<?php echo get_permalink(94); ?>">Privacy Policy</a>
+	</li>
+	<li>&copy; 2011 Wings of Blue</li>
 		
       </ul>
 	</footer><!-- #colophon -->
