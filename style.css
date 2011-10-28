@@ -123,11 +123,10 @@ body {
 }
 #content {
 	margin: 0 34% 0 7.6%;
-	width: 58.4%;
+	width: 70%;
 }
 #secondary {
 	float: right;
-	margin-right: 7.6%;
 	width: 18.8%;
 }
 
@@ -2822,8 +2821,8 @@ nav#access ul.sub-menu li:hover > a{
 }
 
 #secondary.page-sidebar aside ul li {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
     padding-bottom: 4px;
     line-height: 15px;
 }
@@ -2842,7 +2841,7 @@ nav#access ul.sub-menu li:hover > a{
   padding-bottom: 12px;
 }
 #em_widget-3 ul li {
-  background: url(images/events_bg_main.png) repeat-y top center;  
+  background: url(images/events_bg_main.png) repeat-y top center;
 }
 #em_widget-3 ul li a { color: #E8E8E8; }
 #em_widget-3 ul li a:visited { color: #989898; }
@@ -2866,19 +2865,40 @@ footer#colophon {
 	margin: 0px auto;
 	text-align: center;
 }
-#colophon-sup img{
-	margin-bottom: 25px;
+#colophon-sup img.social{
+	margin-bottom: 9px;
 }
 .colophon-left-pad{
 	padding-left: 35px;
 }
-#subscription{
+#subscribe{
 	display: inline-block;
-	margin-top: 20px;
 }
-#subscription label{
+#subscribe label{
 	font-size: 15px;
 	color: #fff;
+}
+#colophon-sup .partner-links {
+	float: right;
+	position: relative;
+	right: 114px;
+	top: 10px;
+}
+#colophon-sup .partner-links .partner-link {
+	float: right;
+	margin-right: 20px;
+	text-align: center;
+}
+#colophon-sup .partner-links .partner-link a {
+	color: #ffffff;
+	text-decoration: none;
+}
+#colophon-sup .partner-links .partner-link a img {
+	height: 34px;
+}
+#colophon-sup .partner-links .partner-link a span {
+	font-size: 7px;
+	line-height: 10px;
 }
 
 #colophon-sub{
@@ -2894,6 +2914,11 @@ footer#colophon {
 #colophon-sub li:first-child{
 	border-left:none;
 }
+#colophon-sub a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 
 /* ClearFix for Float fixes see http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best */
 /* For modern browsers */
@@ -2928,8 +2953,10 @@ header.entry-header {
 h1.entry-title {
 	color: #005eab !important;
 	padding-top: 0px !important;
+	padding-bottom: 0px !important;
 	font-size: 29px !important;
 	line-height: 32px !important;
+  margin-bottom: 5px;
 }
 
 /* Serif Class */
@@ -3064,7 +3091,9 @@ left: auto;
 .rotate-header {
     position: absolute;
     top: 100px;
-    left: 20px;
+    left: -30px;
+    width: 200px;
+    text-align: center;
     font-size: 29px;
     color: #005DAA;
     -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
@@ -3124,7 +3153,7 @@ left: auto;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
-}    
+}
 .em-calendar.fullcalendar tbody td.today {
     background-color: #ffcd35;
 }
@@ -3143,4 +3172,17 @@ left: auto;
 
 .ui-tabs-hide {
     display: none !important;
+}
+
+
+#wpadminbar {
+    display: none !important;
+}
+
+.entry-content h2 {
+  color: #005EAB;
+}
+
+.association {
+  background: #c4def4 url('images/wob-assoc-head.png') no-repeat top left;
 }

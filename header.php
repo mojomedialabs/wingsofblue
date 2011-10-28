@@ -75,7 +75,7 @@
 	<header id="branding" role="banner">
 			<ul class="top-links">
 			    <li>
-			        <a href="<?php echo get_permalink(26); ?>">Contact Us</a>
+			        <a href="<?php echo get_permalink(24); ?>">Contact Us</a>
 			    </li>
 			</ul>
 			<a href="<?php echo get_permalink(6); ?>" class="logo">
