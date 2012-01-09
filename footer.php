@@ -20,22 +20,22 @@
 		?>
 		<div id="colophon-sup">
 			<div style="floa">
-			<a href="http://youtube.com/channels/USERNAMEHERE" id="youtube">
-				<img class="social" style="width: 45px;" src="<?php bloginfo('template_directory'); ?>/images/footer/youtube.png" alt="Youtube" />
+			<a href="#javascript" id="youtube" onclick="alert('Coming Soon.');arguments[0].preventDefault();">
+				<img class="social" style="width: 45px;" src="<?php bloginfo('template_directory'); ?>/images/footer/youtubev2.png" alt="Youtube" />
 			</a>
 			<a href="http://twitter.com/#!/WingsofBlue1" id="twitter">
-				<img class="social" style="width: 45px;" src="<?php bloginfo('template_directory'); ?>/images/footer/twitter.png" alt="Twitter" />
+				<img class="social" style="width: 45px;" src="<?php bloginfo('template_directory'); ?>/images/footer/twitterv2.png" alt="Twitter" />
 			</a>
-			<a href="http://facebook.com/URLTOPAGEHERE" id="facebook">
-				<img class="social" style="width: 45px;" src="<?php bloginfo('template_directory'); ?>/images/footer/facebook.png" alt="Facebook" />
+			<a href="#javascript" id="facebook" onclick="alert('Coming Soon.');arguments[0].preventDefault();">
+				<img class="social" style="width: 45px;" src="<?php bloginfo('template_directory'); ?>/images/footer/facebookv2.png" alt="Facebook" />
 			</a>
 			<a href="http://flickr.com/wingsofblue" id="flickr" class="colophon-left-pad">
 				<img class="social" src="<?php bloginfo('template_directory'); ?>/images/footer/flickr.png" alt="Flickr Photo Album" />
 			</a>
-			<form class="colophon-left-pad" action="/wingsofblue/?page_id=24#wpcf7-f491-p24-o2"i id="subscribe" method="post">
-				<input type="hidden" name="_wpcf7" value="491">
+			<form class="colophon-left-pad" action="#wpcf7-f745-p28-o1" id="subscribe" method="post">
+				<input type="hidden" name="_wpcf7" value="745">
 				<input type="hidden" name="_wpcf7_version" value="3.0">
-				<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f491-p24-o2">
+				<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f745-p28-o1">
 				<label>Subscribe to our newsletter<br><input type="text" name="text-798" value=""placeholder="Email..."></label>
 			</form>
 			<div class="colophon-left-pad partner-links">
@@ -90,11 +90,26 @@
 			<li>
 				&copy; 2011 Wings of Blue Association
 			</li>
+			<li>
+				Designed by <a href="http://mojomedialabs.com/">Mojo Media Labs</a>.
+			</li>
 		</ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26781435-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>
